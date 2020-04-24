@@ -3,30 +3,14 @@ import "./styles/App.css";
 import Contactus from "./components/contactus";
 import Blogs from "./components/Blogs";
 import Recommendetion from "./components/recommend";
-import CourseList from "./components/Courselist";
 import Button from "react-bootstrap/Button";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import CourseBlock from "./components/courseblock";
 
-const linksToRender = [
-  {
-    id: "1",
-    description: "Prisma turns your database into a GraphQL API 😎",
-    name: "A",
-    url: "https://www.prismagraphql.com",
-  },
-  {
-    id: "2",
-    description: "The best GraphQL client",
-    name: "B",
-    url: "https://www.apollographql.com/docs/react/",
-  },
-];
-
 const QUERY_1 = gql`
   query Q1($response: String!) {
-    courses(searchName: $response ) {
+    courses(searchName: $response) {
       courseName
       bundlePrice
       offeredBy
@@ -66,22 +50,27 @@ class App extends React.Component {
 
   CourseListQueryResult = (search) => {
     return (
-    <Query query={QUERY_1} variables={this.state.search}>
-      {({ loading, error, data }) => {
-        if (loading) return "Loading...";
-        if (error) return `Error! ${error.message}`;
+      <Query query={QUERY_1} variables={this.state.search}>
+        {({ loading, error, data }) => {
+          if (loading) return "Loading...";
+          if (error) return `Error! ${error.message}`;
 
-        return (
-          <div>
-            {data.courses.map((course) => (
-              <CourseBlock id="1" name={course.courseName} description={course.skills} url={course.courseUrl} />
-            ))}
-          </div>
-        );
-      }}
-    </Query>
-  );
-    }
+          return (
+            <div>
+              {data.courses.map((course, i) => (
+                <CourseBlock
+                  id={i}
+                  name={course.courseName}
+                  description={course.skills}
+                  url={course.courseUrl}
+                />
+              ))}
+            </div>
+          );
+        }}
+      </Query>
+    );
+  };
   renderHome() {
     return (
       <div className="App">
@@ -136,8 +125,7 @@ class App extends React.Component {
         />
         <button onClick={this.clickSearch}>Search</button>
         <br />
-        Search: {this.state.search}
-        <CourseList datas={linksToRender} />
+        {this.CourseListQueryResult}
         <Contactus />
       </div>
     );
