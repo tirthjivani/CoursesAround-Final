@@ -8,7 +8,7 @@ class Recommendetion extends React.Component {
     return (
         <Card className="text-center">
         <Card.Body>
-          <Card.Title>Get Personalized courses</Card.Title>
+          <Card.Title><h1>Get Personalized courses</h1><hr /><br /></Card.Title>
           <Card.Text>
             Get started answer some questions.
           </Card.Text>

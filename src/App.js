@@ -4,8 +4,10 @@ import Contactus from "./components/contactus";
 import Blogs from "./components/Blogs";
 import Recommendetion from "./components/recommend";
 import CourseList from "./components/Courselist";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Button from "react-bootstrap/Button";
+import gql from "graphql-tag";
+import { Query } from "react-apollo";
+import CourseBlock from "./components/courseblock";
 
 const linksToRender = [
   {
@@ -22,53 +24,98 @@ const linksToRender = [
   },
 ];
 
+const QUERY_1 = gql`
+  query Q1($response: String!) {
+    courses(searchName: $response ) {
+      courseName
+      bundlePrice
+      offeredBy
+      category
+      duration
+      level
+      imageUrl
+      skills
+      courseUrl
+    }
+  }
+`;
+
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       search: "",
-      userid: "",
       showlist: false,
     };
   }
 
-  search_data = (search) => {
-    this.setState({ showlist: true, search: search });
+  updateResponse = (event) => {
+    this.setState({
+      search: event.target.value,
+    });
+    if (event.key === "Enter") {
+      this.clickSearch();
+    }
   };
 
-  getuserdata = (id) => {
-    this.setState({ userid: id });
+  clickSearch = () => {
+    this.setState({
+      showlist: true,
+    });
   };
 
-  backToHome() {
-    this.setState({ showlist: false, search: "" });
-  }
+  CourseListQueryResult = (search) => {
+    return (
+    <Query query={QUERY_1} variables={this.state.search}>
+      {({ loading, error, data }) => {
+        if (loading) return "Loading...";
+        if (error) return `Error! ${error.message}`;
 
+        return (
+          <div>
+            {data.courses.map((course) => (
+              <CourseBlock id="1" name={course.courseName} description={course.skills} url={course.courseUrl} />
+            ))}
+          </div>
+        );
+      }}
+    </Query>
+  );
+    }
   renderHome() {
     return (
       <div className="App">
-        <main>
+        <main style={{ height: "300px" }}>
           <h1>EduEazy</h1>
           <br />
-          <input type="text" placeholder="Search..." />
-          <button onClick={this.search_data}>Search</button>
+          <input
+            onChange={this.updateResponse}
+            value={this.state.search}
+            onKeyPress={this.updateResponse}
+            placeholder="Search..."
+          />
+          <button onClick={this.clickSearch}>Search</button>
+          <br />
+          Search: {this.state.search}
         </main>
-        <sec style={{ height: "100vh" }}>
+        <div id="#Second" style={{ height: "400px" }}>
           <h1>Popular Categories</h1>
           <hr /> <br />
-          <ButtonGroup size="lg" className="mb-2">
-            <Button>Python</Button>
-            <Button>Business</Button>
-            <Button>Arts</Button>
-          </ButtonGroup>
-        </sec>
-        <third id="#Third" style={{ height: "100vh" }}>
+          <Button variant="primary">Computer Science</Button>{" "}
+          <Button variant="primary">Python</Button>{" "}
+          <Button variant="primary">Business</Button>{" "}
+          <Button variant="primary">Arts</Button>{" "}
+          <Button variant="primary">Law</Button>{" "}
+        </div>
+        <div id="#Third" style={{ height: "400px" }}>
           <Recommendetion />
+        </div>
+        <div id="#Forth" style={{ height: "600px" }}>
           <Blogs />
-        </third>
-        <forth id="#Forth">
+        </div>
+        <div id="#Last">
           <Contactus />
-        </forth>
+        </div>
       </div>
     );
   }
@@ -81,9 +128,15 @@ class App extends React.Component {
           <div style={{ fontSize: "50px" }}>EduEazy</div>
         </a>
         <br />
-        <input type="text" placeholder="Search..." />
-        <button onClick={this.search_data}>Search</button>
+        <input
+          onChange={this.updateResponse}
+          value={this.state.search}
+          onKeyPress={this.updateResponse}
+          placeholder={this.state.search}
+        />
+        <button onClick={this.clickSearch}>Search</button>
         <br />
+        Search: {this.state.search}
         <CourseList datas={linksToRender} />
         <Contactus />
       </div>
