@@ -33,3 +33,68 @@
   position: relative;
 	background: #d0e4f5 no-repeat scroll 0% 0%;
 }
+.gap
+{
+  margin-top: 100px;
+}
+
+
+.skills
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.prereq
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.coursename
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.offered
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.category
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.desc
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.price
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.monthlyprice
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.duration
+{
+  text-align: left;
+  font-size: larger;
+}
+
+.level
+{
+  text-align: left;
+  font-size: larger;
+}

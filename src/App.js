@@ -9,8 +9,8 @@ import { Query } from "react-apollo";
 import CourseBlock from "./components/courseblock";
 
 const QUERY_1 = gql`
-  query Q1($response: String!) {
-    courses(searchName: $response) {
+  query Q1($search: String!) {
+    courses(searchName: $search) {
       courseName
       bundlePrice
       offeredBy
@@ -23,6 +23,37 @@ const QUERY_1 = gql`
     }
   }
 `;
+
+const CourseListQueryResult = (search) => {
+  console.log(search);
+  return (
+    <Query query={QUERY_1} variables={search}>
+      {({ loading, error, data }) => {
+        if (loading) return "Loading...";
+        if (error) return `Error! ${error.message}`;
+        console.log(data);
+        return (
+          <div>
+            {data.courses.map((course, i) => (
+              <CourseBlock
+                key={i}
+                courseName={course.courseName}
+                bundlePrice={course.bundlePrice}
+                offeredBy={course.offeredBy}
+                category={course.category}
+                duration={course.duration}
+                level={course.level}
+                imageUrl={course.imageUrl}
+                skills={course.skills}
+                courseUrl={course.courseUrl}
+              />
+            ))}
+          </div>
+        );
+      }}
+    </Query>
+  );
+};
 
 class App extends React.Component {
   constructor(props) {
@@ -48,29 +79,6 @@ class App extends React.Component {
     });
   };
 
-  CourseListQueryResult = (search) => {
-    return (
-      <Query query={QUERY_1} variables={this.state.search}>
-        {({ loading, error, data }) => {
-          if (loading) return "Loading...";
-          if (error) return `Error! ${error.message}`;
-
-          return (
-            <div>
-              {data.courses.map((course, i) => (
-                <CourseBlock
-                  id={i}
-                  name={course.courseName}
-                  description={course.skills}
-                  url={course.courseUrl}
-                />
-              ))}
-            </div>
-          );
-        }}
-      </Query>
-    );
-  };
   renderHome() {
     return (
       <div className="App">
@@ -78,12 +86,15 @@ class App extends React.Component {
           <h1>EduEazy</h1>
           <br />
           <input
+            type="text"
             onChange={this.updateResponse}
             value={this.state.search}
             onKeyPress={this.updateResponse}
-            placeholder="Search..."
+            placeholder="Type..."
           />
-          <button onClick={this.clickSearch}>Search</button>
+          <button className="button" onClick={this.clickSearch}>
+            <span>Search </span>
+          </button>
           <br />
           Search: {this.state.search}
         </main>
@@ -125,7 +136,22 @@ class App extends React.Component {
         />
         <button onClick={this.clickSearch}>Search</button>
         <br />
-        {this.CourseListQueryResult}
+        <CourseListQueryResult 
+        	search = {this.state.search}
+        />
+
+        {/* <CourseBlock
+          courseName="{course.courseName}"
+          bundlePrice="{course.bundlePrice}"
+          offeredBy="{course.offeredBy}"
+          category="{course.category}"
+          duration="{course.duration}"
+          level="{course.level}"
+          imageUrl="https://media-exp1.licdn.com/dms/image/C4D0BAQFsG8fmxly5lQ/company-logo_200_200/0?e=2159024400&v=beta&t=0-B2SbDS1V-obZslNoU5yvQKHjwp3BQSXL0H1cDy-_4"
+          skills="{course.skills}"
+          courseUrl="https://tirthjivani.github.io"
+        /> */}
+
         <Contactus />
       </div>
     );
