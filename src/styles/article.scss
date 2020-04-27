@@ -5,6 +5,11 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+h1 {
+  font-size: 50px;
+  margin: 10px;
+  color: rgb(9, 50, 66);
+}
 /* Container */
 .container {
   display: flex;
@@ -62,7 +67,7 @@ body {
     // background: #212121;
     padding: 8px 10px;
     margin: 0 0 10px;
-    color: #fff;
+    color: rgb(9, 50, 66);
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.075rem;

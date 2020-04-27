@@ -1,103 +1,188 @@
+:root {
+  --off-white: #fafafa;
+}
+.nav {
+  background-color: rgb(9, 50, 66);
+  position: sticky;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  z-index: 1000;
+  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
+}
+
+.nav-logo {
+  height: 60px;
+  width: 60px;
+}
+
+.nav-logo:hover {
+  cursor: pointer;
+}
+
+.nav .nav-content {
+  padding: 0rem 3rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  display: inline;
+  margin-left: 2rem;
+  color: #61dafb;
+}
+
+.nav-item:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.section {
+}
+
+.section-dark {
+  background: #333;
+  color: white;
+}
+
+.section-content {
+  margin: 0 auto;
+  padding: 0px;
+  width: 100%;
+}
+
 .App {
+  margin: 0px 0px;
+  padding: 0px 0px;
   text-align: center;
   background: white;
 }
 
-/* When the input field gets focus, change its width to 100% */
-.App input[type="text"]:focus {
-  width: 40%;
-}
+/* Other images
+https://images.pexels.com/photos/698808/pexels-photo-698808.jpeg?cs=srgb&dl=closeup-photo-of-black-computer-keyboard-s-left-side-keys-698808.jpg&fm=jpg
+https://wallpapertag.com/wallpaper/full/8/e/7/405861-top-coding-wallpaper-2560x1440.jpg
+https://www.eleconomista.com.mx/__export/1507910370401/sites/eleconomista/img/historico/viendo-videos.jpg_73367373.jpg
+*/
 
-.App input[type="text"] {
-  width: 130px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-  box-sizing: border-box;
-  border: 2px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
-  background-color: white;
-  background-image: url(../imgs/searchicon.png);
-  background-size: 20px;
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  padding: 12px 20px 12px 40px;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-}
-
-input {
-  -webkit-writing-mode: horizontal-tb !important;
-  text-rendering: auto;
-  color: -internal-light-dark-color(black, white);
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-transform: none;
-  text-indent: 0px;
-  text-shadow: none;
-  display: inline-block;
-  text-align: start;
-  -webkit-appearance: textfield;
-  background-color: -internal-light-dark-color(white, black);
-  -webkit-rtl-ordering: logical;
-  cursor: text;
-  margin: 0em;
-  font: 400 13.3333px Arial;
-  padding: 1px 0px;
-  border-width: 2px;
-  border-style: inset;
-  border-color: initial;
-  border-image: initial;
-}
-.App .button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-.button {
-  font-size: 20px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
+.mainsearch {
+  height: 100vh;
+  background: white;
+  background-size: 100%;
+  font-style: bold;
   color: #fff;
-  background-color: #4caf50;
-  border: none;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* vertically aligns items */
+  align-items: center;
+  /* horizontally aligns items */
+}
+
+.mainsearch span {
+  vertical-align: middle;
+}
+
+.mainsearch span h1 {
+  font-size: 50px;
+  margin: 10px;
+  color: rgb(9, 50, 66);
+}
+
+.mainsearch span p {
+  font-size: 10px;
+  margin: 10px;
+  font: italic;
+  color: rgb(9, 50, 66);
+}
+
+.mainsearch span input {
+  border: 0;
+  background: white;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.mainsearch button {
+  border: 0;
+  background: white;
+  font-size: 40px;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.btn-group .button {
+  background-color: rgb(9, 50, 66); /* Green */
+  border: 3px solid #61dafb;
+  color: white;
+  padding: 15px 32px;
   text-align: center;
-  font-size: 28px;
-  width: 150px;
-  height: 50px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-.button:hover {
-  background-color: #3e8e41;
-}
-
-.button span {
-  cursor: pointer;
+  text-decoration: none;
   display: inline-block;
-  position: relative;
-  transition: 0.5s;
+  font-size: 16px;
+  cursor: pointer;
+  float: left;
 }
 
-.button span:after {
-  content: "\00bb";
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
+.btn-group .button:not(:last-child) {
+  border-right: none; /* Prevent double borders */
 }
 
-.button:hover span {
-  padding-right: 25px;
+.btn-group .button:hover {
+  background-color: #61dafb;
 }
 
-.button:hover span:after {
-  opacity: 1;
-  right: 0;
+.popcat {
+  height: 100vh;
+  background: rgb(9, 50, 66);
+  background-size: 100%;
+  font-style: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* vertically aligns items */
+  align-items: center;
+  /* horizontally aligns items */
+}
+.popcat h1 {
+  font-size: 50px;
+  margin: 10px;
+  color: white;
+}
+
+.recommendation {
+  height: 100vh;
+  background: rgb(9, 50, 66);
+  background-size: 100%;
+  font-style: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* vertically aligns items */
+  align-items: center;
+  /* horizontally aligns items */
+}
+.recommendation h1 {
+  font-size: 50px;
+  margin: 10px;
+  color: white;
+}
+
+.blogs {
+  height: 100vh;
+  background: white;
+  background-size: 100%;
+  font-style: bold;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* vertically aligns items */
+  align-items: center;
+  /* horizontally aligns items */
 }

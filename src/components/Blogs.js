@@ -49,7 +49,7 @@ class Blogs extends React.Component {
     return (
       <div className="app">
         <h1>Blogs</h1>
-        <hr /> <br />
+        <br />
         <div className="container">
           <div className="column">
             <Article

@@ -1,5 +1,6 @@
 import React from "react";
 import "./styles/App.css";
+import searchimg from "./imgs/search.png";
 import Contactus from "./components/contactus";
 import Blogs from "./components/Blogs";
 import Recommendetion from "./components/recommend";
@@ -7,6 +8,8 @@ import Button from "react-bootstrap/Button";
 import gql from "graphql-tag";
 import { Query } from "react-apollo";
 import CourseBlock from "./components/courseblock";
+import Navbar from "./components/navbar";
+import Section from "./components/section";
 
 const QUERY_1 = gql`
   query Q1($search: String!) {
@@ -24,6 +27,7 @@ const QUERY_1 = gql`
   }
 `;
 
+// eslint-disable-next-line
 const CourseListQueryResult = (search) => {
   console.log(search);
   return (
@@ -82,40 +86,73 @@ class App extends React.Component {
   renderHome() {
     return (
       <div className="App">
-        <main style={{ height: "300px" }}>
-          <h1>EduEazy</h1>
-          <br />
-          <input
-            type="text"
-            onChange={this.updateResponse}
-            value={this.state.search}
-            onKeyPress={this.updateResponse}
-            placeholder="Type..."
-          />
-          <button className="button" onClick={this.clickSearch}>
-            <span>Search </span>
-          </button>
-          <br />
-          Search: {this.state.search}
-        </main>
-        <div id="#Second" style={{ height: "400px" }}>
-          <h1>Popular Categories</h1>
-          <hr /> <br />
-          <Button variant="primary">Computer Science</Button>{" "}
-          <Button variant="primary">Python</Button>{" "}
-          <Button variant="primary">Business</Button>{" "}
-          <Button variant="primary">Arts</Button>{" "}
-          <Button variant="primary">Law</Button>{" "}
-        </div>
-        <div id="#Third" style={{ height: "400px" }}>
-          <Recommendetion />
-        </div>
-        <div id="#Forth" style={{ height: "600px" }}>
-          <Blogs />
-        </div>
-        <div id="#Last">
-          <Contactus />
-        </div>
+        <Navbar />
+        <Section
+          id="section1"
+          inhere={
+            <div className="mainsearch">
+              <span>
+                <h1>EduEazy</h1>
+                <p>
+                  <i>Baseline here</i>
+                </p>
+                <br />
+                <input
+                  type="text"
+                  onChange={this.updateResponse}
+                  value={this.state.search}
+                  onKeyPress={this.updateResponse}
+                  placeholder="Start typing..."
+                />
+                <button onClick={this.clickSearch}>
+                  <span>
+                    <img src={searchimg} style={{ width: "40px" }} />
+                  </span>
+                </button>
+              </span>
+            </div>
+          }
+        />
+        <Section
+          id="section2"
+          inhere={
+            <div className="popcat">
+              <h1>Popular Categories</h1>
+              <br />
+              <div class="btn-group">
+                <Button className="button" variant="primary">Computer Science</Button>
+                <Button className="button" variant="primary">Python</Button>
+                <Button className="button" variant="primary">Business</Button>
+                <Button className="button" variant="primary">Arts</Button>
+                <Button className="button"  variant="primary">Law</Button>
+              </div>
+            </div>
+          }
+        />
+        <Section
+          id="section3"
+          inhere={
+            <div className="blogs">
+              <Blogs />
+            </div>
+          }
+        />
+        <Section
+          id="section4"
+          inhere={
+            <div className="recommendation">
+              <Recommendetion />
+            </div>
+          }
+        />
+        <Section
+          id="section5"
+          inhere={
+            <div className="contact">
+              <Contactus />
+            </div>
+          }
+        />
       </div>
     );
   }
@@ -123,6 +160,22 @@ class App extends React.Component {
   renderList() {
     return (
       <div className="App">
+        {/* <div className="mainsearch">
+          <span>
+            <h1>EduEazy</h1>
+            <br />
+            <input
+              type="text"
+              onChange={this.updateResponse}
+              value={this.state.search}
+              onKeyPress={this.updateResponse}
+              placeholder="Type..."
+            />
+            <button className="button" onClick={this.clickSearch}>
+              <span>Search </span>
+            </button>
+          </span>
+        </div> */}
         <a href="/" onClick={this.backToHome}>
           {/* Logo here */}
           <div style={{ fontSize: "50px" }}>EduEazy</div>
@@ -136,11 +189,9 @@ class App extends React.Component {
         />
         <button onClick={this.clickSearch}>Search</button>
         <br />
-        <CourseListQueryResult 
-        	search = {this.state.search}
-        />
+        {/* <CourseListQueryResult search={this.state.search} /> */}
 
-        {/* <CourseBlock
+        <CourseBlock
           courseName="{course.courseName}"
           bundlePrice="{course.bundlePrice}"
           offeredBy="{course.offeredBy}"
@@ -150,7 +201,7 @@ class App extends React.Component {
           imageUrl="https://media-exp1.licdn.com/dms/image/C4D0BAQFsG8fmxly5lQ/company-logo_200_200/0?e=2159024400&v=beta&t=0-B2SbDS1V-obZslNoU5yvQKHjwp3BQSXL0H1cDy-_4"
           skills="{course.skills}"
           courseUrl="https://tirthjivani.github.io"
-        /> */}
+        />
 
         <Contactus />
       </div>
