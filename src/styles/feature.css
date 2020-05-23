@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+.main-block-features {
+	width: 90%;
+    display: flex;
+    padding-bottom: 60px;
+    justify-content: center;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.block-heading-features h1 {
+    color: #010101;
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-family: 'Josefin Sans';
+    line-height: 1.9rem;
+}
+
+.container-features {
+    display: flex;
+    padding: 5px;
+    padding-right: 10px;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    margin-top: 50px;
+
+}
+
+.inside-block-features {
+    flex: 1;
+    padding: 8px;
+    margin-right: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.inside-block-features img {
+    width: 130px;
+    height: 115px;
+}
+
+.inside-block-features2 img {
+    width: 200px;
+    height: 200px;
+}
+
+.main-block-features h2{
+    font-family:'Josefin Sans';
+    color:#e8998a;
+    font-variant : small-caps ; 
+    /* font-weight: bold ; */
+    letter-spacing: 0.03rem;
+    margin-bottom: 5px;
+}
+.main-block-features p{
+    font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+    font-size: 14px;
+    margin-top: .5em; color: rgb(0, 0, 0);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px){
+    .block-heading-features h1 {
+        font-size: 38px;
+    }   
+
+    .main-block-features {
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-block-features h2{
+        font-family:Georgia,serif;
+        letter-spacing: 0.01rem;
+        margin-bottom: 5px;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .main-block-features p{
+        font-size: 10px; 
+        text-align: center;
+    }
+
+
+    .container-features {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .inside-block-features {
+        flex: 1;
+        padding : 0 ;
+        margin : 0 ; 
+    }
+
+    .inside-block-features img{
+        width: 130px;
+        height: 115px;
+    }
+
+    .inside-block-features2 img{
+        width: 130px;
+        height: 115px;
+    }
+
+
+
+}

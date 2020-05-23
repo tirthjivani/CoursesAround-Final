@@ -1,100 +1,335 @@
-.block-example {
-	width: 6rem;
-	height: 6rem;
-	margin: 0.5rem;
-	background-color: #eee;
-	display: inline-block;
+/* *,
+:after,
+:before {
+	box-sizing: border-box;
+} */
+/* 
+div {
+	display: block;
+} */
+
+.card {
+	display: flex;
+	flex-flow: row nowrap;
+	/* border-style: groove; */
+	border-radius: 10px;
+	margin-bottom: 20px;
+	width: 60%;
+	box-shadow: black;
+	padding-left: 7px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	box-shadow: 0px 2px 4px black;
 }
 
-.popup {
-	position: fixed;
+.carddata {
+	display: flex;
+	flex-flow: column nowrap;
+	flex-grow: 1;
+	flex: 2 1;
+	padding-top: 7px;
+	padding-left: 10px;
 	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-	background-color: rgba(0, 0, 0, 0.5);
+	padding-bottom: 7px;
 }
 
-.popup_inner {
-	position: absolute;
-	left: 5%;
-	right: 5%;
-	top: 5%;
-	bottom: 5%;
-	margin: auto;
+.card-heading {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: left;
+	padding-right: 10px;
+}
+
+.card-heading b {
+	font-size: 18px;
+	text-align: left;
+	margin-bottom: 10px;
+}
+
+.detaildata {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+}
+
+.text-in {
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+
+.card-skills {
+	text-align: justify !important;
+}
+
+.card-basic-detail {
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: left;
+	flex: 1;
+}
+
+.card-basic-detail2 {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: right;
+	text-align: right;
+	flex: 1;
+	padding-left: 10%;
+}
+
+.cardexp {
+	align-content: center;
+	width: 90%;
+	height: 360px;
+	border: 5px;
+	position: relative;
+	border-style: groove;
 	border-radius: 20px;
-	background: white;
+	padding: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 20px;
+	text-align: right;
 }
 
-.img {
-  position: relative;
-	background: #d0e4f5 no-repeat scroll 0% 0%;
-}
-.gap
-{
-  margin-top: 100px;
-}
-
-
-.skills
-{
-  text-align: left;
-  font-size: larger;
-}
-
-.prereq
-{
-  text-align: left;
-  font-size: larger;
+.footer Button {
+	background-color: #e8998a;
+	text-align: center;
+	align-content: center;
+	border: 0px;
+	border-style: groove;
+	border-radius: 10px;
+	flex-direction: column-reverse;
+	color: black;
+	padding: 10px;
+	width: 100px;
+	margin-right: 10px;
+	margin-left: 10px;
+	-webkit-appearance: button;
+	font-size: 14px;
+	box-shadow: 0 2px 4px #010101;
+	transition: 0.3s ease-in-out;
 }
 
-.coursename
-{
-  text-align: left;
-  font-size: larger;
+.footer Button:active {
+	box-shadow: none;
+	transform-origin: center;
+	transform: scale(0.98);
 }
 
-.offered
-{
-  text-align: left;
-  font-size: larger;
+.container {
+	font-size: 26px;
+	text-align: left;
+	size: 20px;
+	width: 800px;
+	margin: 10px;
+	padding-left: 20px;
 }
 
-.category
-{
-  text-align: left;
-  font-size: larger;
+.sidebar {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	align-items: center;
 }
 
-.desc
-{
-  text-align: left;
-  font-size: larger;
+.sidebar img {
+	width: 100%;
+	border-radius: 7px;
 }
 
-.price
-{
-  text-align: left;
-  font-size: larger;
+.footer {
+	display: flex;
+	flex-direction: row-reverse;
+	flex: 1;
 }
 
-.monthlyprice
-{
-  text-align: left;
-  font-size: larger;
+.toggle-button {
+	border: 1px solid black;
+	border-radius: 12px;
+	width: 100px;
+	margin: 0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	cursor: pointer;
+	padding: 2px;
 }
 
-.duration
-{
-  text-align: left;
-  font-size: larger;
+.extended-details {
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	text-align: justify;
+	padding-right: 20px;
+	padding-top: 10px;
 }
 
-.level
-{
-  text-align: left;
-  font-size: larger;
+.col,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12,
+.col-auto,
+.col-lg,
+.col-lg-1,
+.col-lg-2,
+.col-lg-3,
+.col-lg-4,
+.col-lg-5,
+.col-lg-6,
+.col-lg-7,
+.col-lg-8,
+.col-lg-9,
+.col-lg-10,
+.col-lg-11,
+.col-lg-12,
+.col-lg-auto,
+.col-md,
+.col-md-1,
+.col-md-2,
+.col-md-3,
+.col-md-4,
+.col-md-5,
+.col-md-6,
+.col-md-7,
+.col-md-8,
+.col-md-9,
+.col-md-10,
+.col-md-11,
+.col-md-12,
+.col-md-auto,
+.col-sm,
+.col-sm-1,
+.col-sm-2,
+.col-sm-3,
+.col-sm-4,
+.col-sm-5,
+.col-sm-6,
+.col-sm-7,
+.col-sm-8,
+.col-sm-9,
+.col-sm-10,
+.col-sm-11,
+.col-sm-12,
+.col-sm-auto,
+.col-xl,
+.col-xl-1,
+.col-xl-2,
+.col-xl-3,
+.col-xl-4,
+.col-xl-5,
+.col-xl-6,
+.col-xl-7,
+.col-xl-8,
+.col-xl-9,
+.col-xl-10,
+.col-xl-11,
+.col-xl-12,
+.col-xl-auto {
+	position: relative;
+	padding-right: 15px;
+	padding-bottom: 10px;
+	padding-left: 15px;
+}
+
+.row {
+	display: inline-grid;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+
+img {
+	max-width: 400px !important;
+	width: 100%;
+}
+
+.price {
+	display: flex;
+	flex: 4 1;
+	flex-flow: column;
+	background: #0a5c7240;
+	border-radius: 5px;
+	margin-bottom: 10px;
+	padding-right: 20px;
+	padding-top: 10px;
+}
+
+.price b {
+	text-align: right;
+	font-size: 30px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.card {
+		width: 88%;
+	}
+	.sidebar {
+		justify-content: center;
+		padding-right: 2%;
+	}
+	.sidebar img {
+		width: 100%;
+		min-width: 212px;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.card {
+		display: flex;
+		flex-flow: column;
+		border-radius: 10px;
+		margin-bottom: 20px;
+		width: 95%;
+		box-shadow: black;
+		padding-left: 7px;
+		padding-top: 7px;
+		/* padding-bottom: 7px; */
+		box-shadow: 0px 2px 4px black;
+	}
+
+	.sidebar {
+		padding-right: 2%;
+	}
+
+	.card-basic-detail2 {
+		justify-content: right;
+		/* align-items: flex-end ; */
+		text-align: right;
+		flex: 1;
+		padding-left: 4%;
+		width: 50%;
+	}
+
+	/* .footer Button{
+		width: 30%;
+		font-size: 12px;
+		min-width: 86px;
+	} */
+
+	.price {
+		/* width: 50vw; */
+		min-width: 10px;
+	}
+
+	.footer {
+		display: flex;
+		flex-direction: row-reverse;
+		flex: 1 1;
+		margin-right: 2%;
+		/* padding-right: 20%; */
+		margin-left: -40%;
+	}
+	.footer Button{
+		margin-right: 5px;
+	}
 }

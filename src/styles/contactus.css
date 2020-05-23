@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+
+.main-block-contact {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.main-block-contact h1.contact-heading {
+	text-align: center;
+	color: #010101;
+	font-size: 315%;
+	font-weight: 700;
+	letter-spacing: 2px;
+	font-family: "Josefin Sans";
+	margin: 0px;
+	padding: 0px;
+	padding-top: 1em;
+}
+
+.contact-info {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: auto;
+	margin-top: 2%;
+}
+
+.contact-left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	/* padding-right: 10%; */
+	padding: 30px 25px;
+	padding-left: 10%;
+	width: 50%;
+}
+
+
+
+.contact-right {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0%;
+	width: 50%;
+}
+
+.contact-left img.cont-g {
+	display: flex;
+	justify-content: center;
+	width: 38%;
+	min-width: 198px;
+	/* height: auto; */
+}
+
+.feedback-content {
+	padding-left: 10%;
+	margin-left: 10%;
+	background-color: #acdbdf;
+	padding-bottom: 2%;
+	border-bottom-left-radius: 20px;
+	border-top-left-radius: 20px;
+}
+
+.feedback-content p {
+	font-family: Georgia, serif;
+	/* font-size: 1.5vw; */
+	font-size: 18px;
+	/* font-size: 10px; */
+	color: #010101;
+}
+
+.feedback-form {
+	display: flex;
+	flex-direction: column;
+	align-items: right;
+	/* justify-content: right; */
+}
+
+.feedback-content .feedback-field {
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	/* font-size: 1.1vw; */
+	font-size: 13px;
+	color: #010101;
+}
+
+.feedback-form .feedback-input {
+	width: 55%;
+	outline: none;
+}
+
+.feedback-form .feedback-text {
+	width: 55%;
+	/* height: 8vw; */
+	height: 100px;
+	outline: none;
+}
+
+.feedback-field .btn-submit {
+	/* background-color: rgb(9, 50, 66); Green */
+	opacity: 0.8;
+	transition: 0.2s;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 1rem;
+	width: 110px;
+	background-color: #e8998a;
+	color: black;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	margin-left: 0px;
+	font-size: 16px;
+	cursor: -webkit-grab;
+	cursor: grab;
+	box-shadow: 0 2px 4px #010101;
+  
+	transition: 0.3s ease;
+}
+
+.feedback-field .btn-submit:hover {
+	opacity: 1;
+	/* box-shadow: ;  */
+}
+
+.feedback-field .btn-submit:active {
+	box-shadow: none;
+	transform-origin: center;
+	transform: scale(0.98);
+	/* box-shadow: ;  */
+}
+
+.feedback-text::placeholder,
+.feedback-input::placeholder {
+	color: #616e7f;
+	font-family: "Roboto", sans-serif;
+	/* font-size: 0.9vw; */
+	font-size: 11px;
+	padding: 0;
+	margin: 0;
+}
+
+.contact-bottom {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	/* width: 100px; */
+}
+
+.copy-right {
+	font-size: 10px;
+	cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.main-block-contact h1.contact-heading {
+		font-size: 38px;
+	}
+
+	.contact-left {
+		padding-left: 2%;
+		width: 40%;
+	}
+
+	.contact-right {
+		width: 60%;
+	}
+
+	.contact-left img.cont-g {
+		width: 45%;
+		min-width: 180px;
+	}
+
+	.feedback-content p {
+		font-size: 18px;
+	}
+	.feedback-content .feedback-field {
+		font-size: 14px;
+	}
+
+	.feedback-form .feedback-input {
+		width: 70%;
+	}
+
+	.feedback-form .feedback-text {
+		width: 70%;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.main-block-contact h1.contact-heading {
+		font-size: 38px;
+	}
+
+	.contact-left {
+		width: 0%;
+		margin: 0%;
+		padding: 0%;
+	}
+
+	.contact-right {
+		width: 100%;
+		justify-content: center;
+	}
+
+	.contact-left img.cont-g {
+		width: 0%;
+		min-width: 0;
+	}
+
+	.feedback-content {
+		/* padding-top: 5%; */
+		padding-left: 12%;
+		/* margin-left: 12%; */
+		background-color: #acdbdf;
+	}
+
+	.feedback-content p {
+		font-size: 16px;
+	}
+	.feedback-content .feedback-field {
+		font-size: 12px;
+	}
+
+	.feedback-form .feedback-input {
+		width: 70%;
+	}
+
+	.feedback-form .feedback-text {
+		width: 70%;
+	}
+
+	.contact-bottom {
+		padding-top: 3%;
+	}
+}

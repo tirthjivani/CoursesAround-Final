@@ -1,51 +1,50 @@
 import React from "react";
 import "../styles/recommend.css";
-import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
+import faq from "../animated-svg/faq animated.svg";
+import { Link as LinktoSomething } from "react-router-dom";
+import { AUTH_TOKEN } from "../Constant";
 
 class Recommendetion extends React.Component {
-  render() {
-    return (
-      <Card className="text-center">
-        <Card.Body>
-          <Card.Title>
-            <h1>Get Personalized Courses</h1>
-            <br />
-          </Card.Title>
-          <Card.Text>Get started answer some questions.</Card.Text>
-          <Button
-            variant="primary"
-            className="button"
-            onClick={this.handleClick}
-          >
-            Get started
-          </Button>
-        </Card.Body>
-      </Card>
 
-      //   <div className="styles--banner--2dZ2E" data-purpose="banner">
-      //     <div className="styles--banner__title--20L4_">
-      //       Get personalized recommendations
-      //     </div>
-      //     <div class="styles--banner__subtitle--27ZAl">
-      //       Answer a few questions for your top picks
-      //     </div>
-      //     <div data-purpose="onboarding-trigger">
-      //       <button
-      //         data-purpose="launch-onboarding-trigger--button"
-      //         type="button"
-      //         class="btn btn-primary"
-      //       >
-      //         Get started
-      //       </button>
-      //     </div>
-      //   </div>
-    );
-  }
+	handleClick() {
+		alert("You must login first!")
+	}
 
-  handleClick = () => {
-    alert("Recommendation Quiz will pop up");
-  };
+	handleQuiz() {
+
+	}
+	render() {
+		return (
+			<div className="main-block-recom">
+				<div className="recom-left">
+					<img src={faq} alt="" className="faq-g"></img>
+				</div>
+				<div className="recom-right">
+					<div className="main-heading">
+						<h1>Get Personalized Courses</h1>
+					</div>
+					<div className="content">
+						<p>Get started answer some questions.</p>
+						<LinktoSomething
+							className="lkink-asbutton"
+							to={
+								localStorage.getItem(AUTH_TOKEN)
+									? "/recommend"
+									: "/login"
+							}
+							onClick={localStorage.getItem(AUTH_TOKEN)
+								? this.handleQuiz
+								: this.handleClick}
+						>
+							Get started
+						</LinktoSomething>
+
+					</div>
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Recommendetion;

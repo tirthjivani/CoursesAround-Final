@@ -1,64 +1,15 @@
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap'); */
+
 :root {
-  --off-white: #fafafa;
-}
-.nav {
-  background-color: rgb(9, 50, 66);
-  position: sticky;
-  top: 0px;
-  width: 100%;
-  height: 70px;
-  z-index: 1000;
-  box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.15);
-}
-
-.nav-logo {
-  height: 60px;
-  width: 60px;
-}
-
-.nav-logo:hover {
-  cursor: pointer;
-}
-
-.nav .nav-content {
-  padding: 0rem 3rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
-}
-
-.nav-item {
-  display: inline;
-  margin-left: 2rem;
-  color: #61dafb;
-}
-
-.nav-item:hover {
-  color: white;
-  cursor: pointer;
-}
-
-.section {
-}
-
-.section-dark {
-  background: #333;
-  color: white;
-}
-
-.section-content {
-  margin: 0 auto;
-  padding: 0px;
-  width: 100%;
+	--off-white: #fafafa;
 }
 
 .App {
-  margin: 0px 0px;
-  padding: 0px 0px;
-  text-align: center;
-  background: white;
+	margin: 0px 0px;
+	padding: 0px 0px;
+	text-align: center;
+	background: #f0ece2;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Other images
@@ -67,122 +18,407 @@ https://wallpapertag.com/wallpaper/full/8/e/7/405861-top-coding-wallpaper-2560x1
 https://www.eleconomista.com.mx/__export/1507910370401/sites/eleconomista/img/historico/viendo-videos.jpg_73367373.jpg
 */
 
+.section {
+	background-color: white;
+}
 .mainsearch {
-  height: 100vh;
-  background: white;
-  background-size: 100%;
-  font-style: bold;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* vertically aligns items */
-  align-items: center;
-  /* horizontally aligns items */
+	height: 100vh;
+	background: white;
+	background-size: 100%;
+	font-style: bold;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* vertically aligns items */
+	align-items: center;
+	/* horizontally aligns items */
 }
 
 .mainsearch span {
-  vertical-align: middle;
+	width: 600px;
 }
 
 .mainsearch span h1 {
-  font-size: 50px;
-  margin: 10px;
-  color: rgb(9, 50, 66);
+	font-size: 50px;
+	margin: 10px;
+	width: 100%;
+	font-family: "Josefin Sans";
+	color: #010101;
 }
 
 .mainsearch span p {
-  font-size: 10px;
-  margin: 10px;
-  font: italic;
-  color: rgb(9, 50, 66);
+	font-size: 10px;
+	margin: 10px;
+	font: italic;
+	color: #69779b;
 }
 
-.mainsearch span input {
-  border: 0;
-  background: white;
-  font-size: 40px;
-  letter-spacing: 1px;
-  font-weight: 600;
+.mainsearch form .info {
+	font-size: 15px;
+	color: #ccc;
+	/* padding-left: 26px; */
 }
 
-.mainsearch button {
-  border: 0;
-  background: white;
-  font-size: 40px;
-  letter-spacing: 1px;
-  font-weight: 600;
+form.form-search {
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	/* align-items: center; */
+	/* text-align: center; */
+	width: 100%;
+	/* max-width: 790px; */
+	padding-top: 15px;
+	align-items: center;
+	justify-content: center;
 }
 
-.btn-group .button {
-  background-color: rgb(9, 50, 66); /* Green */
-  border: 3px solid #61dafb;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
-  float: left;
+.inner-form {
+	/* display: -ms-flexbox; */
+	display: flex;
+	width: 100%;
+	border: 1px solid rgb(230, 230, 230);
+	/* -ms-flex-pack: justify; */
+	justify-content: space-between;
+	-ms-flex-align: center;
+	align-items: center;
+	box-shadow: 3px 10px 18px 0px rgba(0, 0, 0, 0.15);
+	border-radius: 25px;
+	overflow: hidden;
+	margin-bottom: 10px;
+	/* margin-top: 80px; */
 }
 
-.btn-group .button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+.inner-form .input-field {
+	height: 48px;
 }
 
-.btn-group .button:hover {
-  background-color: #61dafb;
+.inner-form .input-field input {
+	height: 100%;
+	background: transparent;
+	border: 0px;
+	border-radius: 0px;
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 20px;
+	color: #000;
+	margin-left: 27px;
+}
+
+.inner-form .input-field input.placeholder {
+	color: #222;
+	font-size: 18px;
+}
+
+.inner-form .input-field input:-moz-placeholder {
+	color: #222;
+	font-size: 18px;
+}
+
+.inner-form .input-field input::-webkit-input-placeholder {
+	color: #222;
+	font-size: 18px;
+}
+
+.inner-form .input-field.first-wrap {
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	align-items: center;
+	background: #f7f7f7;
+}
+
+.inner-form .input-field.second-wrap {
+	min-width: 120px;
+	/* width: 15vw; */
+}
+
+.inner-form .input-field.second-wrap .btn-search {
+	height: 100%;
+	width: 100%;
+	border-radius: 0px;
+	text-align: justify;
+	flex-direction: inherit;
+	margin-top: 0px;
+	margin-left: 0;
+	white-space: nowrap;
+	font-size: 17px;
+	color: black;
+	border: 0;
+	cursor: pointer;
+	position: relative;
+	z-index: 0;
+	background: #e8998a;
+	opacity: 0.8;
+	transition: all 0.2s ease-out, color 0.2s ease-out;
+	font-weight: 300;
+}
+
+.inner-form .input-field.second-wrap .btn-search:hover {
+	opacity: 1;
+}
+
+.inner-form .input-field.second-wrap .btn-search:focus {
+	outline: 0;
+	box-shadow: none;
+}
+
+.secondpagesearch {
+	background: white;
+	background-size: 100%;
+	font-style: bold;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* vertically aligns items */
+	align-items: center;
+	/* horizontally aligns items */
+}
+
+.secondpagesearch span {
+	vertical-align: middle;
+	width: 600px;
+}
+
+.secondpagesearch span h1 {
+	font-size: 50px;
+	margin: 10px;
+	color: #093242;
+}
+
+.secondpagesearch span p {
+	font-size: 10px;
+	margin: 10px;
+	font: italic;
+	color: #acdbdf;
+}
+
+.secondpagesearch span input {
+	border: 2px solid #ca8b8bad;
+	height: 54px;
+	font-size: 20px;
+	width: 400px;
+	border-radius: 18px;
+	padding: 0px;
+	box-shadow: inset -2px 0px 16px 0px #f7f5f5, 30px 30px 30px #bcaeae;
+}
+
+.secondpagesearch .search-button:hover {
+	background-color: #2188a5;
+	color: black;
+}
+
+.secondpagesearch .search-button:active {
+	transform-origin: center;
+	transform: scale(0.8);
+}
+
+.filter-list {
+	padding-top: 2%;
+}
+
+.filter-list p {
+	font-family: Georgia, serif;
+	font-size: 18px;
 }
 
 .popcat {
-  height: 100vh;
-  background: rgb(9, 50, 66);
-  background-size: 100%;
-  font-style: bold;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* vertically aligns items */
-  align-items: center;
-  /* horizontally aligns items */
+	height: 90vh;
+	/* background: #acdbdf; */
+	background: white;
+	background-size: 100%;
+	font-style: bold;
+	color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* vertically aligns items */
+	align-items: center;
 }
-.popcat h1 {
-  font-size: 50px;
-  margin: 10px;
-  color: white;
+
+.features {
+	/* height: 100vh; */
+	background: white;
+	background-size: 100%;
+	font-style: bold;
+	color: #acdbdf;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* vertically aligns items */
+	align-items: center;
+	/* horizontally aligns items */
 }
 
 .recommendation {
-  height: 100vh;
-  background: rgb(9, 50, 66);
-  background-size: 100%;
-  font-style: bold;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* vertically aligns items */
-  align-items: center;
-  /* horizontally aligns items */
+	height: 90vh;
+	background: white;
+	background-size: 100%;
+	font-style: bold;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* vertically aligns items */
+	align-items: center;
+	/* horizontally aligns items */
 }
-.recommendation h1 {
-  font-size: 50px;
-  margin: 10px;
-  color: white;
+
+Button,
+input:focus {
+	outline: none;
 }
 
 .blogs {
-  height: 100vh;
-  background: white;
-  background-size: 100%;
-  font-style: bold;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* vertically aligns items */
-  align-items: center;
-  /* horizontally aligns items */
+	/* height: 90vh; */
+	/* background: #f0ece2; */
+	background-color: #fff;
+	background-size: 100%;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	/* vertically aligns items */
+	align-items: center;
+	/* horizontally aligns items */
+}
+
+.contact {
+	/* height: 80%; */
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-color: rgba(187, 187, 187, 0.472);
+	display: flex;
+	justify-content: center;
+	/* vertically aligns items */
+	align-items: center;
+	/* horizontally aligns items */
+}
+
+.listhere {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	flex-grow: 1;
+}
+
+.card-list {
+	justify-content: center;
+}
+
+.btn-prev-next {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-content: center;
+	/* width:30px; */
+}
+
+.btn-prev-next button.btn-prev {
+	background-color: #e89989;
+	opacity: 1;
+	color: black;
+	width: 40px;
+	border-radius: 50%;
+	align-items: center;
+	font-size: 16px;
+	cursor: grab;
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.navy {
+	overflow: hidden;
+	display: none;
+}
+
+.nav {
+	position: fixed;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	/* .blogs {
+		height: 100vh;
+	} */
+
+	.section-content {
+		padding-top: 70px;
+	}
+
+	.popcat {
+		height: 120vh;
+	}
+	/* .contact {
+		height: 100vh;
+	} */
+	.features {
+		height: 100vh;
+	}
+	.recommendation {
+		height: 100vh;
+	}
+
+	.mainsearch span {
+		width: 320px;
+	}
+
+	.mainsearch span h1 {
+		font-size: 42px;
+	}
+
+	.mainsearch span p {
+		font-size: 8px;
+	}
+
+	form.form-search {
+		width: 320px;
+		margin-right: 0;
+		padding-right: 0;
+	}
+
+	.inner-form {
+		width: 74vw;
+		min-width: 324px;
+		padding-right: 0%;
+	}
+
+	.inner-form .input-field {
+		height: 43px;
+	}
+
+	.inner-form .input-field input::-webkit-input-placeholder {
+		font-size: 15px;
+	}
+
+	.inner-form .input-field.second-wrap {
+		width: 20%;
+		min-width: 85px;
+	}
+
+	.inner-form .input-field.second-wrap .btn-search {
+		font-size: 14px;
+	}
+
+	.mainsearch form .info {
+		font-size: 12px;
+		padding-left: 0;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.nav {
+		overflow: hidden;
+		display: none;
+		position: relative;
+	}
+
+	.navy {
+		position: fixed;
+		display: block;
+		overflow: visible;
+	}
 }

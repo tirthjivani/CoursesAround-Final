@@ -1,0 +1,142 @@
+/* Base */
+
+.main-block-blog {
+	/* background-color: #f0ece2; */
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px;
+	margin-bottom: 100px;
+	justify-content: center;
+	position: relative;
+	flex-flow: row;
+	text-align: center;
+}
+
+.main-heading-blog h1 {
+	font-size: 50px;
+	padding: 0px;
+	margin-bottom: 2rem;
+	color: black;
+	font-family: "Josefin Sans";
+	letter-spacing: 0.2rem;
+}
+
+/* Container */
+.column {
+	/* flex-basis: percentage(1/3); */
+	/* width: percentage(1/3); */
+	padding: 0 10px;
+	box-sizing: border-box;
+	border: 3px black;
+	justify-content: space-around;
+	margin-right: 15px;
+}
+
+.container-bl {
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	padding: 10px;
+	flex-direction: row;
+	max-width: 1000px;
+	margin-right: 10px;
+	justify-content: space-around;
+}
+
+/* Article (Component) */
+
+.article {
+	background: white;
+	/* background-image: url(../imgs/corona-virus.jpg) ; */
+	/* filter: blur(8px); */
+	margin: 0 0 20px;
+	padding: 20px;
+	border-radius: 4px;
+	border: 1.5px solid #010101;
+	box-shadow: 0 2px 4px #010101;
+	cursor: pointer;
+	transition: 0.3s ease;
+}
+
+.article:hover {
+	box-shadow: 0 2px 4px rgba(#000, 0.2), 0 4px 8px rgba(#000, 0.2);
+}
+
+.article:active {
+	box-shadow: none;
+	transform-origin: center;
+	transform: scale(0.98);
+}
+
+.article_category {
+	display: inline-block;
+	background: #47bbc5;
+	/* 47bbc5 */
+	padding: 5px 8px;
+	border: black;
+	border-radius: 10px;
+	margin: 0 0 10px;
+	color: white;
+	font-size: 0.75rem;
+	font-weight: 600;
+	letter-spacing: 0.075rem;
+	text-transform: uppercase;
+}
+
+.article_excerpt {
+	color: black;
+	line-height: 1.5rem;
+	font-size: 0.875rem;
+}
+
+.article_title {
+	margin: 0 0 10px;
+	color: #e8998a;
+	font-family: "Josefin Sans";
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.75rem;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.main-block-blog {
+		padding: 0;
+		margin: 0;
+	}
+	.main-heading-blog h1 {
+		font-size: 38px;
+	}
+
+	.article {
+		width: 100%;
+		/* height: 100%; */
+	}
+
+	.article_category {
+		font-size: 1.5vw;
+	}
+
+	.article_title {
+		font-size: 2vw;
+		line-height: 0.1rem;
+	}
+
+	.article_excerpt {
+		font-size: 10px;
+		line-height: 1rem;
+	}
+
+	.column {
+		/* height: 25vh ; */
+		width: 60vw;
+		margin: 0px;
+	}
+
+	.container-bl {
+		flex-direction: column;
+		width: 100%;
+	}
+}

@@ -1,40 +1,179 @@
-.styles--banner--2dZ2E .styles--banner__content--38Dd9 {
-  align-items: center;
-  background-color: #29303b;
-  color: #f7f8fa;
-  display: flex;
-  height: 360px;
-  text-align: center;
+.main-block-recom {
+	background-color: white;
+	width: 100%;
+	/* height: 67vh; */
+	/* height: auto; */
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	align-items: center;
 }
 
-.styles--banner--2dZ2E {
-  margin-bottom: 32px;
-}
-.styles--banner--2dZ2E
-  .styles--banner__content--38Dd9
-  .styles--banner__grid--3exfA {
-  padding: 0 0.77rem;
-  width: 100%;
-}
-
-.button {
-  background-color: rgb(9, 50, 66); /* Green */
-  border: 3px solid #61dafb;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  cursor: pointer;
+.main-block-recom .recom-left {
+	width: 45%;
+	height: 100%;
+	/* height: auto; */
+	padding: 24px 22px;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	justify-content: center;
+	text-align: center;
+	/* margin-top: 2% ; */
 }
 
-.button:not(:last-child) {
-  border-right: none; /* Prevent double borders */
+.main-block-recom .recom-right {
+	width: 55%;
+	margin-top: -1%;
+	padding: 30px 25px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	background-color: #acdbdf;
+	border-bottom-right-radius: 20px;
+	border-top-right-radius: 20px;
+	/* border: 2px solid #ca8b8bad;  */
 }
 
-.button:hover {
-  background-color: #61dafb;
+.main-block-recom .faq-g {
+	justify-self: auto;
+	display: flex;
+	width: 75%;
+	/* height: 25vw; */
+	/* height: auto; */
+	margin-left: 11%;
 }
 
+.main-heading h1 {
+	font-size: 3.8vw;
+	font-family: "Josefin Sans";
+	letter-spacing: 0.2rem;
+	color: #010101;
+}
 
+.main-block-recom .recom-right .content p {
+	padding-bottom: 4%;
+	font-family: Georgia, serif;
+}
+
+.main-block-recom .recom-right .content {
+	font-family: Georgia, serif;
+	color: #010101;
+	letter-spacing: 0.1rem;
+}
+
+.main-block-recom .recom-right .button:not(:last-child) {
+	border-right: none; /* Prevent double borders */
+}
+
+.main-block-recom .recom-right .button:hover {
+	background-color: #61dafb;
+	color: black;
+}
+
+.lkink-asbutton {
+	padding: 7px;
+	padding-left: 9px;
+	padding-right: 9px;
+	border-radius: 15px;
+	font-size: 1.5vw;
+	color: #010101;
+	background-color: #e8998a;
+	letter-spacing: 0.1rem;
+	text-decoration: none;
+	transition: 0.3s ease;
+	/* cursor: -webkit-grab; */
+	cursor: grab;
+	box-shadow: 0 2px 4px #010101;
+	opacity: 0.8;
+}
+
+.lkink-asbutton:hover {
+	opacity: 1;
+	color: black;
+	/* font-weight: bold; */
+}
+
+.lkink-asbutton:active {
+	opacity: 1;
+	box-shadow: none;
+	transform-origin: center;
+	transform: scale(0.98);
+
+	/* font-weight: bold; */
+}
+
+.prev-recom {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	
+	/* .recommendation {
+		height: 40vh;
+	} */
+
+	.main-block-recom {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.main-heading h1 {
+		font-size: 3.9vw;
+	}
+
+	.main-block-recom .recom-left{
+		width: 70%;
+		display: flex;
+		justify-content: center;
+		align-items:center ;
+	}
+	.main-block-recom .recom-right {
+		margin-top: 8%;
+		width: 100%;
+	}
+
+	.main-block-recom .faq-g {
+		/* width: 100%; */
+		width: 360px;
+		/* height: 0vh; */
+		margin-left: 0%;
+	}
+
+	.lkink-asbutton {
+		font-size: 2vw;
+	}
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.main-block-recom {
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.main-heading h1 {
+		font-size: 30px;
+		min-block-size: 50px;
+	}
+
+	.main-block-recom .recom-left {
+		padding: 0;
+		padding-bottom: 16%;
+		width: 60%;
+		min-width: 250px;
+	}
+
+	.main-block-recom .recom-right {
+		width: 100%;
+	}
+
+	.main-block-recom .faq-g {
+		width: 80%;
+		min-width: 250px;
+		margin-left: 0;
+	}
+
+	.lkink-asbutton {
+		font-size: 2vw;
+	}
+}

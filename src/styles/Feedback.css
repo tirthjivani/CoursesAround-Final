@@ -1,0 +1,55 @@
+
+.contactqueries {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    margin-right: 10px;
+    padding-right: 80px;
+  }
+  
+  /* .feedback-header h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
+    color: blue;
+  } */
+  
+  input.feedback-input {
+    width: 20%;
+    padding: 5px 22px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    border: 2px solid #58B19F;
+    border-radius: 10px 10px;
+  }
+  
+  textarea {
+    width: 20%;
+    height: 50px;
+    padding: 5px 22px;
+    margin: 10px 0px;
+    box-sizing: border-box;
+    border: 2px solid #58B19F;
+    border-radius: 10px 10px;
+    resize: none; 
+  }
+  
+  input[type=submit] {
+    background-color: #8842d5;
+    border: none;
+    color: white;
+    padding: 8px 36px;
+  }
+  
+  .errorMsg {
+    color: #cc0000;
+    margin-bottom: 12px;
+  }
+  
+  .main1 {
+    margin-right: 15px;
+  }
+  
+  .button {
+    border-radius: 20px ;
+  }

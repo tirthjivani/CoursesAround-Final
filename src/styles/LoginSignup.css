@@ -1,0 +1,276 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+* {
+	box-sizing: border-box;
+	font-family: "Roboto", sans-serif;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.mr-20 {
+	margin-right: 20px !important;
+}
+
+.LS-App {
+	height: 100vh;
+	display: flex;
+	color: white;
+}
+
+.LS-left {
+	width: 40%;
+	/* background: linear-gradient(to right, #fff, #b6ce83b0); */
+	/* background: linear-gradient(to left, #ff75fb59, #ffffffff, #ffffffff); */
+	background-color: #f0ece2;
+	display: flex;
+	justify-content: center;
+	padding-bottom: 8%;
+	flex-direction: column;
+	align-items: center;
+}
+
+
+
+
+.LS-left .LS-home {
+	display: flex;
+	align-items: left;
+	justify-content: left;
+	align-content: left;
+}
+
+.LS-left h1 {
+	/* display: flex; */
+	/* justify-content: center; */
+	font-size: 60px;
+	text-align: center;
+	font-family: "Josefin Sans";
+	color: #010101;
+}
+
+.LS-left h3 {
+	font-size: 25px;
+	height: auto;
+	margin-bottom: 8px;
+	text-align: center;
+	font-family: "Josefin Sans";
+	color: #010101;
+}
+
+.LS-left img.log-g {
+	justify-self: center;
+	display: flex;
+	width: 75%;
+	height: auto;
+	margin-left: 0;
+}
+
+/* .LS-Form {
+	width: 60%;
+	background-color: rgb(9, 50, 66)	;
+	padding: 25px 40px;
+	overflow: auto;
+} */
+
+.LS-Form {
+	width: 100%;
+	background-color: #acdbdf;
+	padding: 25px 40px;
+	overflow: auto;
+}
+
+.FormCenter1 {
+	padding-top: 150px;
+	margin-bottom: 50px;
+	/* position: relative;
+	top: 10%; */
+}
+
+.FormCenter2 {
+	padding-top: 100px;
+	margin-bottom: 50px;
+	/* position: relative;
+	top: 10%; */
+}
+
+.FormTitle {
+	color: #707c8b;
+	font-weight: 300;
+	margin-bottom: 50px;
+}
+
+.FormTitle__Link {
+	color: #707c8b;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1.7em;
+	margin: 0 10px;
+	padding-bottom: 5px;
+}
+
+.FormTitle__Link:first-child {
+	margin-left: 0;
+}
+
+.FormTitle__Link--Active {
+	color: white;
+	border-bottom: 1px solid #199087;
+}
+
+.FormField {
+	margin-bottom: 24px;
+}
+
+.FormField__Label {
+	display: block;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	color: #010101;
+}
+
+.FormField .FormField__Input {
+	width: 70%;
+	background-color: transparent;
+	border: none;
+	color: #010101;
+	outline: none;
+	border-bottom: 1px solid #445366;
+	font-size: 1em;
+	font-weight: 300;
+	padding-left: 4px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+}
+
+.FormField__Input::placeholder {
+	color: #616e7f;
+	padding: 0px;
+	margin: 0px;
+}
+
+.FormField__bottom {
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 24px;
+}
+.FormField__Button {
+	/* max-width: fit-content; */
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	/* flex-wrap: wrap; */
+	/* width: fit-content; */
+	background-color: #119b8d;
+	border: none;
+	outline: none;
+	border-radius: 25px;
+	padding: 15px 70px;
+	font-size: 0.9em;
+	font-weight: 500;
+	cursor: pointer;
+	/* box-shadow: 1px 2px 2px 0px #fff; */
+}
+
+.FormField__Button:hover {
+	background-color: #05776c;
+	/* background-color: #0a5d7a; */
+}
+
+.FormField__Button::active {
+	transform: translateY(4px);
+	/* box-shadow: 0px 2px 1px #fff; */
+}
+
+.FormField__Link {
+	color: #66707d;
+	text-decoration: none;
+	display: inline-block;
+	border-bottom: 1.5px solid #225e62;
+	/* padding-bottom: 5px; */
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+.FormField__Link:hover {
+	color: white;
+	border-bottom: 1.5px solid white;
+	transition: 0.3s;
+}
+.FormField__CheckboxLabel {
+	color: #646f7d;
+	font-size: 0.9em;
+}
+
+.FormField__Checkbox {
+	position: relative;
+	top: 1.5px;
+}
+
+.FormField__TermsLink {
+	color: white;
+	border-bottom: 1px solid #199087;
+	text-decoration: none;
+	display: inline-block;
+	padding-bottom: 2px;
+	margin-left: 5px;
+}
+
+.Go-back-home {
+	display: flex;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+	top: 0%;
+	color: #010101;
+}
+
+.Go-back-home a {
+	text-decoration: none;
+	display: inline-block;
+	color: black;
+	padding: 8px 16px;
+}
+
+.Go-back-home a:hover {
+	background-color: #119b8d;
+	/* background-color: #05776c; */
+	color: black;
+}
+
+.Go-back-home .previous {
+	background-color: #f1f1f1;
+	color: black;
+	margin-right: 10px;
+}
+
+.Go-back-home .round {
+	border-radius: 50%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+	.LS-left {
+		overflow: hidden;
+		display: none;
+	}
+	.LS-Form {
+		width: 100%;
+		overflow: auto;
+	}
+
+	.FormCenter1 {
+		padding-top: 100px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.LS-left {
+		width: 50%;
+	}
+
+	.FormCenter1 {
+		padding-top: 150px;
+	}
+}
