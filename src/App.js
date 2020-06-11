@@ -265,8 +265,7 @@ class App extends React.Component {
 
 	renderList() {
 		return (
-			<div className="App">
-				
+			<div className="App">	
 				<Navbarx2 />
 				<Navbary2 />
 				<Section

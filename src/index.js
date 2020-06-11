@@ -48,12 +48,12 @@ ReactDOM.render(
 		<ApolloProvider client={client}>
 			<Switch>
 				<Route path="/" exact component={App} />
-				<Route path="/login" component={Login}></Route>
+				<Route path="/login" component={Login} />
 				<Route path="/signup" component={SignUp} />
 				<Route path="/search" component={Search} />
 				<Route path="/search/:response" component={SearchPage} />
-				<Route path="/recommend" exact component={Play} />
-				<Route path="/forgetpwd" exact component={ForgetPwd} />
+				<Route path="/recommend" component={Play} />
+				<Route path="/forgetpwd" component={ForgetPwd} />
 				<Route path="/network-error" component={NetworkError} />
 				<Route path="/something-went-wrong" component={SomethingWentWrong} />
 				<Route path="/prev" exact component={Prev} />
