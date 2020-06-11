@@ -16,7 +16,7 @@ import { ApolloLink, concat } from "apollo-link";
 import Prev from "./components/prev";
 import Login from "./auth/Login";
 import SignUp from "./auth/Registeration";
-import { onError } from "apollo-link-error";
+// import { onError } from "apollo-link-error";
 import NetworkError from "./errors/networkerror";
 import SomethingWentWrong from "./errors/swwerror";
 import ForgetPwd from "./auth/ForgetPwd";
@@ -50,6 +50,8 @@ ReactDOM.render(
 				<Route path="/" exact component={App} />
 				<Route path="/login" component={Login}></Route>
 				<Route path="/signup" component={SignUp} />
+				<Route path="/search" component={Search} />
+				<Route path="/search/:response" component={SearchPage} />
 				<Route path="/recommend" exact component={Play} />
 				<Route path="/forgetpwd" exact component={ForgetPwd} />
 				<Route path="/network-error" component={NetworkError} />

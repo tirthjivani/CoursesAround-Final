@@ -16,6 +16,7 @@ import Section from "./components/section";
 import Popcatagories from "./components/popucategories";
 // import Dictaphone from "./components/speech";    I want to impliment this in the code xD
 import Circular from "./components/circular";
+import { Route } from "react-router";
 
 const QUERY_1 = gql`
 	query props(
@@ -265,6 +266,7 @@ class App extends React.Component {
 	renderList() {
 		return (
 			<div className="App">
+				
 				<Navbarx2 />
 				<Navbary2 />
 				<Section
@@ -344,6 +346,9 @@ class App extends React.Component {
 					}
 				/>
 			</div>
+
+
+			
 		);
 	}
 
