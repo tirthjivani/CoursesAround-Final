@@ -21,7 +21,9 @@ export default class Navbarx extends Component {
 	};
 
 	handleClick = (event) => {
-		this.state.value = document.getElementById("mynav");
+		this.setState({
+			value: document.getElementById("mynav")
+		})
 		if (this.state.value === "nav-item") {
 			this.state.value.className += "responsive";
 		}
